@@ -1,13 +1,112 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind', sans-serif;
+    list-style-type: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* NAVBAR */
+
+.nav {
+    background-color: #85A389;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__marca {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.nav__logo {
+    width: 100px;
+    padding: 5px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav__contenedor {
+    width: 10000px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav__lista {
+    display: flex;
+    gap: 25px;
+}
+
+.nav__link {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.carrito {
+    padding-right: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 5px;
+}
+
+.carrito__img {
+    width: 40px;
+}
+
+.circulo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito__numero {
+    color: #85A389;
+    font-weight: bolder;
+}
+
+/* GREETING */
+
+.greeting {
+    display: flex;
+    justify-content: center;
+}
+
+.greeting__bienvenida {
+    color:#F1C27B;
+    padding: 25px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #85A389; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer__logo {
+    width: 300px;
+
+}
+
+.footer__p {
+    color: white;
+    font-weight: bolder;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
