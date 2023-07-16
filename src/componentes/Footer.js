@@ -7,10 +7,10 @@ export const Footer = () => {
                 
                 <div className='footer__logo'>
                     <div>
-                    <a className='footerlink' href='#'><img src={logoFooter} alt='Logo Footer' /></a>
+                        <a className='footerlink' href='#'><img src={logoFooter} alt='Logo Footer' /></a>
                     </div>
                     <div>
-                    <p className='footer__p'>Copyright - Claudia Rolack</p>
+                        <p className='footer__p'>Copyright - Claudia Rolack</p>
                     </div>
                 </div>
                 

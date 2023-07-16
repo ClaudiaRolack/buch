@@ -1,25 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Hind', sans-serif;
+    font-family: 'Roboto', sans-serif;
     list-style-type: none;
 }
 
 /* NAVBAR */
 
-.nav {
+.contenedor {
     background-color: #85A389;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-.nav__marca {
+.contenedor__nav {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    padding-left: 20px;
+    justify-content: space-around;
 }
 
 .nav__logo {
@@ -32,29 +30,76 @@ img {
     height: 100%;
 }
 
-.nav__contenedor {
-    width: 10000px;
-    display: flex;
-    justify-content: center;
+.nav {
+   width: 700px;
 }
 
-.nav__lista {
+.list {
+    width: 100%;
     display: flex;
-    gap: 25px;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+.list__item {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    /* overflow: hidden; */
+}
+
+.list__item--click {
+    cursor: pointer;
+}
+
+.list__button {
+    display: block;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .nav__link {
-    display: flex;
-    text-decoration: none;
-    color: white;
-    font-weight: bolder;
+  color:#ebebeb;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.nav__link--inside {
+    border-radius: 1px;
+    border-color: #F1C27B;
+}
+
+.nav__link--inside:hover {
+    background-color: #F1C27B;
+}
+
+.list__arrow {
+    margin-left: auto;
+}
+
+.list__show {
+    height: 100%;
+    margin: auto;
+    transition: height .4s;
+    /* height: 0; */
+}
+
+.contenedor__carrito {
+display: flex;
+flex-direction: flex-end;
+
 }
 
 .carrito {
-    padding-right: 25px;
     display: flex;
-    flex-direction: row;
-    align-items: end;
+    flex-direction: row; 
+    align-items: center;
     gap: 5px;
 }
 
@@ -77,19 +122,6 @@ img {
     font-weight: bolder;
 }
 
-/* GREETING */
-
-.greeting {
-    display: flex;
-    justify-content: center;
-}
-
-.greeting__bienvenida {
-    color:#F1C27B;
-    padding: 25px;
-}
-
-
 /* FOOTER */
 
 footer {
@@ -109,4 +141,5 @@ footer {
     font-weight: bolder;
     padding-top: 25px;
     padding-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
 }
