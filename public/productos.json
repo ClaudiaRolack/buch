@@ -3,7 +3,11 @@
     { 
 
     "id":1, 
-    "categoria":"Agendas y calendarios", 
+    "categoria":{
+        "id":1,
+        "nombre":"Agendas y calendarios",
+        "url":"agendas-y-calendarios"
+    }, 
     "nombre":"La antiagenda", 
     "precio":17000, 
     "imagen":"/img/agendaAC1.png", 
@@ -13,7 +17,11 @@
     { 
 
     "id":2, 
-    "categoria":"Agendas y calendarios", 
+    "categoria":{
+        "id":1,
+        "nombre":"Agendas y calendarios",
+        "url":"agendas-y-calendarios"
+    }, 
     "nombre":"Mafalda, calendario 2021", 
     "precio":5000 , 
     "imagen":"/img/calendarioAC1.png", 
@@ -23,7 +31,11 @@
     { 
 
     "id":3, 
-    "categoria":"Agendas y calendarios", 
+    "categoria":{
+        "id":1,
+        "nombre":"Agendas y calendarios",
+        "url":"agendas-y-calendarios"
+    },
     "nombre":"Mafalda, agenda 2023", 
     "precio":12000 , 
     "imagen":"/img/agendaAC2.png", 
@@ -33,7 +45,11 @@
     { 
     
     "id":4, 
-    "categoria":"agendas y calendarios", 
+    "categoria":{
+        "id":1,
+        "nombre":"Agendas y calendarios",
+        "url":"agendas-y-calendarios"
+    }, 
     "nombre":"Mafalda, calendario 2023", 
     "precio":6000 , 
     "imagen":"/img/calendarioAC2.png", 
@@ -43,7 +59,11 @@
     { 
     
     "id":5, 
-    "categoria":"Agendas y calendarios", 
+    "categoria":{
+        "id":1,
+        "nombre":"Agendas y calendarios",
+        "url":"agendas-y-calendarios"
+    },
     "nombre":"Mafalda, agenda", 
     "precio":15000 , 
     "imagen":"/img/agendaAC3.png", 
@@ -53,7 +73,11 @@
     { 
     
     "id":6, 
-    "categoria":"Ciencias y naturaleza", 
+    "categoria":{
+        "id": 2,
+        "nombre":"Ciencias y naturaleza",
+        "url":"ciencias-y-naturaleza"
+    }, 
     "nombre":"Cómo funciona el mundo, Vaclav Smil", 
     "precio": 12000 , 
     "imagen":"/img/libroCN1.png", 
@@ -63,7 +87,11 @@
     { 
     
     "id":7, 
-    "categoria":"Ciencias y naturaleza", 
+    "categoria":{
+        "id": 2,
+        "nombre":"Ciencias y naturaleza",
+        "url":"ciencias-y-naturaleza"
+    }, 
     "nombre":"Las células de la mente, Ricardo Tapia", 
     "precio": 8000 , 
     "imagen":"/img/libroCN2.png", 
@@ -73,7 +101,11 @@
     { 
 
     "id":8, 
-    "categoria":"Ciencias y naturaleza", 
+    "categoria":{
+        "id": 2,
+        "nombre":"Ciencias y naturaleza",
+        "url":"ciencias-y-naturaleza"
+    }, 
     "nombre":"La destrucción de la naturaleza, Vazquez Orozco", 
     "precio":17000 , 
     "imagen":"/img/libroCN3.png", 
@@ -83,7 +115,11 @@
     { 
         
     "id":9, 
-    "categoria":"Ciencias y naturaleza", 
+    "categoria":{
+        "id": 2,
+        "nombre":"Ciencias y naturaleza",
+        "url":"ciencias-y-naturaleza"
+    }, 
     "nombre":"Lecciones de física de feynman, Richard Feynman", 
     "precio":25000 , 
     "imagen":"/img/libroCN4.png", 
@@ -93,7 +129,11 @@
     { 
 
     "id":10, 
-    "categoria":"Ciencias y naturaleza", 
+    "categoria":{
+        "id": 2,
+        "nombre":"Ciencias y naturaleza",
+        "url":"ciencias-y-naturaleza"
+    }, 
     "nombre":"Qué es metabolismo, Antonio Peña", 
     "precio":8000 , 
     "imagen":"/img/libroCN5.png", 
@@ -103,7 +143,11 @@
     { 
 
     "id":11, 
-    "categoria":"Ficción juvenil", 
+    "categoria":{
+        "id": 3,
+        "nombre":"Ficción juvenil",
+        "url":"ficcion-juvenil"
+    }, 
     "nombre":"Una amistad para siempre, Lucy Maud Montgomery", 
     "precio":17000 , 
     "imagen":"/img/libroFJ1.png", 
@@ -113,7 +157,11 @@
     { 
     
     "id":12, 
-    "categoria":"Ficción juvenil", 
+    "categoria":{
+        "id": 3,
+        "nombre":"Ficción juvenil",
+        "url":"ficcion-juvenil"
+    }, 
     "nombre":"Ana de las tejas verdes, Lucy Maud Montgomery", 
     "precio":19000 , 
     "imagen":"/img/libroFJ2.png", 
@@ -123,7 +171,11 @@
     { 
         
     "id":13, 
-    "categoria":"Ficción juvenil", 
+    "categoria":{
+        "id": 3,
+        "nombre":"Ficción juvenil",
+        "url":"ficcion-juvenil"
+    },  
     "nombre":"Cuatro, Veronica Roth", 
     "precio":20000 , 
     "imagen":"/img/libroFJ3.png", 
@@ -133,7 +185,11 @@
     { 
         
     "id":14, 
-    "categoria":"Ficción juvenil", 
+    "categoria":{
+        "id": 3,
+        "nombre":"Ficción juvenil",
+        "url":"ficcion-juvenil"
+    },  
     "nombre":"Divergente, Veronica Roth", 
     "precio":22000 , 
     "imagen":"/img/libroFJ4.png", 
@@ -143,7 +199,11 @@
     { 
         
     "id":15, 
-    "categoria":"Ficción juvenil", 
+    "categoria":{
+        "id": 3,
+        "nombre":"Ficción juvenil",
+        "url":"ficcion-juvenil"
+    },  
     "nombre":"Hush hush, Becca Fitzpatrick", 
     "precio":18000 , 
     "imagen":"/img/libroFJ5.png", 
@@ -153,7 +213,11 @@
     { 
         
     "id":16, 
-    "categoria":"Ficción juvenil", 
+    "categoria":{
+        "id": 3,
+        "nombre":"Ficción juvenil",
+        "url":"ficcion-juvenil"
+    },  
     "nombre":"Insurgente, Veronica Roth", 
     "precio":21000 , 
     "imagen":"/img/libroFJ6.png",
@@ -163,7 +227,11 @@
     { 
         
     "id":17, 
-    "categoria":"Ficción juvenil", 
+    "categoria":{
+        "id": 3,
+        "nombre":"Ficción juvenil",
+        "url":"ficcion-juvenil"
+    },  
     "nombre":"Leal, Veronica Roth", 
     "precio":24000 ,
     "imagen":"/img/libroFJ7.png", 
@@ -173,7 +241,11 @@
     { 
         
     "id":18, 
-    "categoria":"Juegos de mesa", 
+    "categoria":{
+        "id": 4,
+        "nombre":"Juegos de mesa",
+        "url":"juegos-de-mesa"
+    },  
     "nombre":"Hanabi", 
     "precio":15000 , 
     "imagen":"/img/juego1.png", 
@@ -183,7 +255,11 @@
     { 
         
     "id":19, 
-    "categoria":"Juegos de mesa", 
+    "categoria":{
+        "id": 4,
+        "nombre":"Juegos de mesa",
+        "url":"juegos-de-mesa"
+    }, 
     "nombre":"Azul, jardin de la reina", 
     "precio":28000 , 
     "imagen":"/img/juego2.png", 
@@ -193,7 +269,11 @@
     { 
         
     "id":20, 
-    "categoria":"Juegos de mesa", 
+    "categoria":{
+        "id": 4,
+        "nombre":"Juegos de mesa",
+        "url":"juegos-de-mesa"
+    }, 
     "nombre":"The red cathedral", 
     "precio": 25000 , 
     "imagen":"/img/juego3.png", 
@@ -203,7 +283,11 @@
     { 
         
     "id":21, 
-    "categoria":"Juegos de mesa", 
+    "categoria":{
+        "id": 4,
+        "nombre":"Juegos de mesa",
+        "url":"juegos-de-mesa"
+    }, 
     "nombre":"Paris", 
     "precio":27000 , 
     "imagen":"/img/juego4.png", 
@@ -213,7 +297,11 @@
     { 
         
     "id":22, 
-    "categoria":"Juegos de mesa", 
+    "categoria":{
+        "id": 4,
+        "nombre":"Juegos de mesa",
+        "url":"juegos-de-mesa"
+    }, 
     "nombre":"Bitoku", 
     "precio":33000 , 
     "imagen":"/img/juego5.png", 
@@ -223,7 +311,11 @@
     { 
         
     "id":23, 
-    "categoria":"Juegos de mesa", 
+    "categoria":{
+        "id": 4,
+        "nombre":"Juegos de mesa",
+        "url":"juegos-de-mesa"
+    }, 
     "nombre":"Carcassonne, constructores y comerciantes", 
     "precio":17000 , 
     "imagen":"/img/juego6.png", 
@@ -232,8 +324,12 @@
     },
     { 
         
-    "id":24, 
-    "categoria":"Ocio y hobbies", 
+    "id":24,  
+    "categoria":{
+        "id": 5,
+        "nombre":"Ocio y hobbies",
+        "url":"ocio-y-hobbies"
+    },
     "nombre":"Bonsai", 
     "precio":8000 , 
     "imagen":"/img/libroOH1.png", 
@@ -243,7 +339,11 @@
     { 
         
     "id":"25", 
-    "categoria":"Ocio y hobbies", 
+    "categoria":{
+        "id": 5,
+        "nombre":"Ocio y hobbies",
+        "url":"ocio-y-hobbies"
+    }, 
     "nombre":"Caligrafía y lettering", 
     "precio":17000 , 
     "imagen":"/img/libroOH2.png",
@@ -253,7 +353,11 @@
     { 
         
     "id":"26", 
-    "categoria":"Ocio y hobbies", 
+    "categoria":{
+        "id": 5,
+        "nombre":"Ocio y hobbies",
+        "url":"ocio-y-hobbies"
+    }, 
     "nombre":"Puzzle, Paul Cezanne", 
     "precio":20000 , 
     "imagen":"/img/puzzle1.png", 
@@ -263,7 +367,11 @@
     { 
         
     "id":"27", 
-    "categoria":"Ocio y hobbies", 
+    "categoria":{
+        "id": 5,
+        "nombre":"Ocio y hobbies",
+        "url":"ocio-y-hobbies"
+    }, 
     "nombre":"Puzzle, Vicent Van Gogh", 
     "precio":20000 , 
     "imagen":"/img/puzzle2.png", 

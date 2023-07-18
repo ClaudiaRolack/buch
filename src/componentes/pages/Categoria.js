@@ -1,11 +1,12 @@
 import React from 'react';
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
 import { useParams } from "react-router-dom";
-import { Item } from '../Item';
+import { Item } from '../Item'
 
 export const Categoria = () => {
+
     const [productos, setProductos] = useState ([])
-    const {id} = useParams()
+    const {categoria} = useParams()
   
     useEffect(() => {
       try {
@@ -18,16 +19,17 @@ export const Categoria = () => {
       } catch (error) {
         console.log(error)
       }
-    }, []);
+    }, [])
 
-    const productosCategorias = productos.filter((e) => e.categoria == id.nombre)
+    const productosCategoria = categoria ? productos.filter((producto) => producto.categoria.url === categoria) : productos
   
     return (
+
       <div className='categorias'>
-        {productosCategorias.map((e) =>{
-          return (<Item key={e.id} producto={e} />)
+        {productosCategoria.map((productoCategoria) =>{
+          return (<Item key={productoCategoria.nombre} producto={productoCategoria} />)
         })}
 
       </div>
-    );
+    )
   }

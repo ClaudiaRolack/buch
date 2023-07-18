@@ -1,9 +1,10 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-export const Item = ({producto}) => {
+export const Item = ({ producto }) => {
 
     return (
-        <article>
+       
             <div className="item__container">
                 <div className='item__imagen'>
                     <img src={producto.imagen} alt="producto" />
@@ -15,11 +16,13 @@ export const Item = ({producto}) => {
                     <div className='item__precio'>
                         <h2>${producto.precio}</h2>
                     </div>
-                    <div className='item__verdetalle'>
-                        <button>Ver más</button>
+                    <div>
+                        <button className='item__verdetalle'>
+                           <NavLink className="verdetalle__link" to={`/ver-detalle/${producto.id}`}>Ver más</NavLink> 
+                        </button>
                     </div>
                 </div>
             </div>
-        </article>
+        
     )
 }

@@ -1,9 +1,11 @@
+import React from "react"
 import { useState, useEffect } from "react"
 import { ItemList } from "./ItemList"
 
 export const ItemListContainer = () => {
 
   const [productos, setProductos] = useState([])
+  const [stock, setStock] = useState(0);
 
   useEffect(() => {
     try {
@@ -11,6 +13,7 @@ export const ItemListContainer = () => {
         const response = await fetch('../../productos.json')
         const jsonData = await response.json()
         setProductos(jsonData)
+        setStock(jsonData[0].stock);
       }
       fetchProduct()
     } catch (error) {
@@ -22,7 +25,7 @@ export const ItemListContainer = () => {
     <div>
       
       <div className="itemListContainer">
-        <ItemList productos={productos} />
+        <ItemList productos={productos} stock={stock} />
       </div>
 
     </div>

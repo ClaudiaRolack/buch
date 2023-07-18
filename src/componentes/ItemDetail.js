@@ -1,30 +1,36 @@
 import React from 'react'
 import { ItemCount } from "./ItemCount"
 
-export const ItemDetail = ({producto}) => {
+export const ItemDetail = ({ producto }) => {
     return (
         <article>
             <div className="itemDetail">
-                <div>
+
+                <div className='itemDetail__imagen'>
                     <img src={producto.imagen} alt="producto" />
                 </div>
-                <div>
-                    <div>
-                        <h1>{producto.nombre}</h1>
-                        <h2>Categoria:{producto.categoria}</h2>
-                        <h2>Stock:{producto.stock}</h2>
+
+                <div className='ItemDetail__info'>
+
+                    <div className='info1'>
+                    <h1>{producto.nombre}</h1> 
                     </div>
-                    <div>
-                        <h2>${producto.precio}</h2>
+                    
+                    <div className='info2'>
+                    <h2>Categoría: {producto.categoria.nombre}</h2>
+                    <h2>Stock: {producto.stock}</h2>
                     </div>
-                    <div>
-                        <ItemCount />
+
+                    <div className='info3'>
+                    <h2>${producto.precio}</h2>
                     </div>
-                    <div>
-                        <button>Agregar a carrito</button>
-                        <button>Comprar ahora</button>
+
+                    <div className='info4'>
+                    <ItemCount stock={producto.stock} />
                     </div>
+
                 </div>
+
             </div>
         </article>
     )

@@ -7,15 +7,17 @@ export const ItemDetailContainer = () => {
 
     const [productos, setProductos] = useState([])
     const [cargar, setCargar] = useState(true)
-    const resultado = useParams()
+    const { id } = useParams()
 
     useEffect(() => {
         try {
-                const fetchProduct = async () => {
+            const fetchProduct = async () => {
                 const response = await fetch('../../productos.json')
                 const jsonData = await response.json()
                 setProductos(jsonData)
-                setCargar(false)
+                setTimeout(() => {
+                    setCargar(false)
+                }, 4000)
                 return (jsonData)
             }
             fetchProduct()
@@ -24,17 +26,17 @@ export const ItemDetailContainer = () => {
         }
     }, []);
 
-    const productoEncontrado = productos.find((producto) => producto.nombre === producto.nombre);
+    const productoEncontrado = productos.find((producto) => producto.id === parseInt(id));
 
     return (
-        <div>
-
-
-
-
-            {cargar ? ('Cargando...') : productoEncontrado ? (<ItemDetail producto={productoEncontrado} />) : ('Producto no encontrado')}
-
-
+        <div className="itemDetailContainer">
+            {cargar ?
+                ('Cargando...')
+                :
+                productoEncontrado ?
+                    (<ItemDetail producto={productoEncontrado} />)
+                    :
+                    ('Producto no encontrado')}
 
         </div>
     )

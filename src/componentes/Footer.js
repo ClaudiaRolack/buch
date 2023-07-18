@@ -1,3 +1,4 @@
+import React from "react"
 import logoFooter from "../images/logoFooter.png"
 
 export const Footer = () => {

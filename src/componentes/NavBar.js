@@ -1,5 +1,5 @@
-import {useEffect, useState} from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import { CartWidget } from "./CartWidget"
 import logoTrans from "../images/logoTrans.png"
 
@@ -15,7 +15,9 @@ export const NavBar = () => {
         <div className="contenedor">
             <header className="contenedor__nav">
                 <div className="nav__marca">
-                    <a className="nav__link" href="#"><img className="nav__logo" src={logoTrans} alt="Logo" /></a>
+                    <Link to="/">
+                        <a className="nav__link" href="#"><img className="nav__logo" src={logoTrans} alt="Logo" /></a>
+                    </Link>
                 </div>
                 <div className="nav">
 
@@ -26,7 +28,7 @@ export const NavBar = () => {
                         </li>
 
                         <li className="list__item list__item--click">
-                           
+
                             <div className="list__button list__button--click">
 
                                 <NavLink className="nav__link" to="/categorias">Categorías</NavLink>
@@ -34,7 +36,7 @@ export const NavBar = () => {
                                 <ul className="list__show">
 
                                     <li className="list__inside">
-                                    <NavLink className="nav__link nav__link--inside" to="/categorias/agendas-y-calendarios">Agendas y Calendarios</NavLink>
+                                        <NavLink className="nav__link nav__link--inside" to="/categorias/agendas-y-calendarios">Agendas y Calendarios</NavLink>
                                     </li>
 
                                     <li className="list__inside">
@@ -42,19 +44,19 @@ export const NavBar = () => {
                                     </li>
 
                                     <li className="list__inside">
-                                    <NavLink className="nav__link nav__link--inside" to="/categorias/ficcion-juvenil">Ficción Juvenil</NavLink>
+                                        <NavLink className="nav__link nav__link--inside" to="/categorias/ficcion-juvenil">Ficción Juvenil</NavLink>
                                     </li>
 
                                     <li className="list__inside">
-                                    <NavLink className="nav__link nav__link--inside" to="/categorias/juegos-de-mesa">Juegos de mesa</NavLink>
+                                        <NavLink className="nav__link nav__link--inside" to="/categorias/juegos-de-mesa">Juegos de mesa</NavLink>
                                     </li>
 
                                     <li className="list__inside">
-                                    <NavLink className="nav__link nav__link--inside" to="/categorias/ocio-y-hobbies">Ocio y Hobbies</NavLink> 
+                                        <NavLink className="nav__link nav__link--inside" to="/categorias/ocio-y-hobbies">Ocio y Hobbies</NavLink>
                                     </li>
 
                                     <li className="list__inside">
-                                    <NavLink className="nav__link nav__link--inside" to="/categorias/ver-todo">Ver todo</NavLink>
+                                        <NavLink className="nav__link nav__link--inside" to="/categorias">Ver todo</NavLink>
                                     </li>
 
                                 </ul>
@@ -63,7 +65,7 @@ export const NavBar = () => {
                         <li className="list__item">
                             <NavLink className="nav__link" to="/contacto">Contacto</NavLink>
                         </li>
-                   
+
                     </ul>
 
                 </div>
