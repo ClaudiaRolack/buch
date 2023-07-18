@@ -1,20 +1,21 @@
+import React from 'react'
 
+export const Item = ({producto}) => {
 
-export const Item = ({nombre, precio, imagen}) => {
     return (
         <article>
             <div className="item__container">
-                <div>
-                    <img src={imagen} alt="producto" />
+                <div className='item__imagen'>
+                    <img src={producto.imagen} alt="producto" />
                 </div>
-                <div>
-                    <div>
-                        <h1>{nombre}</h1>
+                <div className='item__info'>
+                    <div className='item__nombre'>
+                        <h1>{producto.nombre}</h1>
                     </div>
-                    <div>
-                        <h2>${precio}</h2>
+                    <div className='item__precio'>
+                        <h2>${producto.precio}</h2>
                     </div>
-                    <div>
+                    <div className='item__verdetalle'>
                         <button>Ver más</button>
                     </div>
                 </div>

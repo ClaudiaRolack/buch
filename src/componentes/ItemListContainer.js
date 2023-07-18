@@ -3,26 +3,28 @@ import { ItemList } from "./ItemList"
 
 export const ItemListContainer = () => {
 
-  const [productos, setProductos] = useState([]);
+  const [productos, setProductos] = useState([])
 
   useEffect(() => {
     try {
-      const fetchProduct = async() => {
+        const fetchProduct = async () => {
         const response = await fetch('../../productos.json')
         const jsonData = await response.json()
-        console.log(jsonData)
+        setProductos(jsonData)
       }
       fetchProduct()
-    } catch(error) {
+    } catch (error) {
       console.log(error)
     }
   }, []);
 
   return (
     <div>
-      {productos.map ((producto) => {return (<p key={producto.id}>{producto.nombre}</p>)})}
+      
+      <div className="itemListContainer">
+        <ItemList productos={productos} />
+      </div>
+
     </div>
   )
 }
-
-{/* <ItemList productos={productos} /> */}

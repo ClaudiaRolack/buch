@@ -1,4 +1,4 @@
-
+import React from 'react'
 import carritoTrans from "../images/carritoTrans.png"
 
 export const CartWidget = () => {

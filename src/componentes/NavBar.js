@@ -1,7 +1,9 @@
 import {useEffect, useState} from 'react';
+import { NavLink } from 'react-router-dom';
 import { CartWidget } from "./CartWidget"
 import logoTrans from "../images/logoTrans.png"
-import {arrow} from "../images/arrow.webp"
+
+
 
 
 
@@ -16,51 +18,54 @@ export const NavBar = () => {
                     <a className="nav__link" href="#"><img className="nav__logo" src={logoTrans} alt="Logo" /></a>
                 </div>
                 <div className="nav">
+
                     <ul className="list">
 
                         <li className="list__item">
-                            <a className="nav__link" href="#">Inicio</a>
+                            <NavLink className="nav__link" to="/">Inicio</NavLink>
                         </li>
 
                         <li className="list__item list__item--click">
                            
                             <div className="list__button list__button--click">
 
-                                <a className="nav__link" href="#">Categorías</a>
+                                <NavLink className="nav__link" to="/categorias">Categorías</NavLink>
 
                                 <ul className="list__show">
 
                                     <li className="list__inside">
-                                    <a href="#" className="nav__link nav__link--inside">Agendas y Calendarios</a>
+                                    <NavLink className="nav__link nav__link--inside" to="/categorias/agendas-y-calendarios">Agendas y Calendarios</NavLink>
                                     </li>
 
                                     <li className="list__inside">
-                                        <a href="#" className="nav__link nav__link--inside">Ciencias y Naturaleza</a>
+                                        <NavLink className="nav__link nav__link--inside" to="/categorias/ciencias-y-naturaleza">Ciencias y Naturaleza</NavLink>
                                     </li>
 
                                     <li className="list__inside">
-                                    <a href="#" className="nav__link nav__link--inside">Ficción Juvenil</a>
+                                    <NavLink className="nav__link nav__link--inside" to="/categorias/ficcion-juvenil">Ficción Juvenil</NavLink>
                                     </li>
 
                                     <li className="list__inside">
-                                    <a href="#" className="nav__link nav__link--inside">Juegos de mesa</a>
+                                    <NavLink className="nav__link nav__link--inside" to="/categorias/juegos-de-mesa">Juegos de mesa</NavLink>
                                     </li>
 
                                     <li className="list__inside">
-                                    <a href="#" className="nav__link nav__link--inside">Ocio y Hobbies</a>
+                                    <NavLink className="nav__link nav__link--inside" to="/categorias/ocio-y-hobbies">Ocio y Hobbies</NavLink> 
                                     </li>
 
                                     <li className="list__inside">
-                                    <a href="#" className="nav__link nav__link--inside">Todo</a>
+                                    <NavLink className="nav__link nav__link--inside" to="/categorias/ver-todo">Ver todo</NavLink>
                                     </li>
 
                                 </ul>
                             </div>
                         </li>
                         <li className="list__item">
-                            <a className="nav__link" href="#">Contacto</a>
+                            <NavLink className="nav__link" to="/contacto">Contacto</NavLink>
                         </li>
+                   
                     </ul>
+
                 </div>
                 <div className="contenedor__carrito">
                     <CartWidget />
