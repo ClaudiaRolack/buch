@@ -1,4 +1,5 @@
 import React from "react"
+import { NavLink } from 'react-router-dom';
 import logoFooter from "../images/logoFooter.png"
 
 export const Footer = () => {
@@ -8,7 +9,7 @@ export const Footer = () => {
                 
                 <div className='footer__logo'>
                     <div>
-                        <a className='footerlink' href='#'><img src={logoFooter} alt='Logo Footer' /></a>
+                        <NavLink className="footerlink" to='/'><img src={logoFooter} alt='Logo Footer' /></NavLink>
                     </div>
                     <div>
                         <p className='footer__p'>Copyright - Claudia Rolack</p>

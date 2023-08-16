@@ -1,9 +1,8 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import signomenos from "../images/signomenos.png"
 import signomas from "../images/signomas.png"
 
-export const ItemCount = ({ stock }) => {
+export const ItemCount = ({ stock, handleOnAdd }) => {
 
     let [contador, setContador] = useState(1)
 
@@ -30,7 +29,7 @@ export const ItemCount = ({ stock }) => {
 
             <div>
 
-                <button className='agregar__carrito'>
+                <button className='agregar__carrito' onClick={() => {addItem(contador)}}>
                     Agregar al carrito
                 </button>
 

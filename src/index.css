@@ -264,6 +264,19 @@ display: flex;
     padding-bottom: 20px;
 }
 
+
+/*ITEMDETAIL*/
+
+.option {
+    text-decoration: none;
+    background: none;
+    background-color: #F1C27B;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
 /*CATEGORIAS*/
 
 .categorias {

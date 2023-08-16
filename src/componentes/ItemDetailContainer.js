@@ -3,7 +3,7 @@ import { ItemDetail } from "./ItemDetail"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
-export const ItemDetailContainer = () => {
+export const ItemDetailContainer = (addItem) => {
 
     const [productos, setProductos] = useState([])
     const [cargar, setCargar] = useState(true)
@@ -34,7 +34,7 @@ export const ItemDetailContainer = () => {
                 ('Cargando...')
                 :
                 productoEncontrado ?
-                    (<ItemDetail producto={productoEncontrado} />)
+                    (<ItemDetail producto={productoEncontrado} handleOnAdd={addItem} />)
                     :
                     ('Producto no encontrado')}
 

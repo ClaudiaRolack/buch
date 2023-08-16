@@ -1,23 +1,20 @@
-import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import { CartContext } from "./CartContext"
 import { CartWidget } from "./CartWidget"
 import logoTrans from "../images/logoTrans.png"
 
-
-
-
-
 export const NavBar = () => {
 
+    const { cart } = useContext(CartContext);
+    const itemCount = cart.reduce((total, item) => total + item.qty, 0);
 
     return (
 
         <div className="contenedor">
             <header className="contenedor__nav">
                 <div className="nav__marca">
-                    <Link to="/">
-                        <a className="nav__link" href="#"><img className="nav__logo" src={logoTrans} alt="Logo" /></a>
-                    </Link>
+                    <NavLink to="/" className="nav__link" href="#"><img className="nav__logo" src={logoTrans} alt="Logo" /></NavLink>
                 </div>
                 <div className="nav">
 
@@ -70,7 +67,7 @@ export const NavBar = () => {
 
                 </div>
                 <div className="contenedor__carrito">
-                    <CartWidget />
+                    <CartWidget itemCount={itemCount} />
                 </div>
 
             </header>

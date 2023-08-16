@@ -23,7 +23,7 @@
         "url":"agendas-y-calendarios"
     }, 
     "nombre":"Mafalda, calendario 2021", 
-    "precio":5000 , 
+    "precio":5000, 
     "imagen":"/img/calendarioAC1.png", 
     "stock":3 
 
@@ -37,7 +37,7 @@
         "url":"agendas-y-calendarios"
     },
     "nombre":"Mafalda, agenda 2023", 
-    "precio":12000 , 
+    "precio":12000, 
     "imagen":"/img/agendaAC2.png", 
     "stock":4 
 
@@ -51,7 +51,7 @@
         "url":"agendas-y-calendarios"
     }, 
     "nombre":"Mafalda, calendario 2023", 
-    "precio":6000 , 
+    "precio":6000, 
     "imagen":"/img/calendarioAC2.png", 
     "stock":17 
 
@@ -65,7 +65,7 @@
         "url":"agendas-y-calendarios"
     },
     "nombre":"Mafalda, agenda", 
-    "precio":15000 , 
+    "precio":15000, 
     "imagen":"/img/agendaAC3.png", 
     "stock":12 
 
@@ -79,7 +79,7 @@
         "url":"ciencias-y-naturaleza"
     }, 
     "nombre":"Cómo funciona el mundo, Vaclav Smil", 
-    "precio": 12000 , 
+    "precio": 12000, 
     "imagen":"/img/libroCN1.png", 
     "stock":6 
 
@@ -93,7 +93,7 @@
         "url":"ciencias-y-naturaleza"
     }, 
     "nombre":"Las células de la mente, Ricardo Tapia", 
-    "precio": 8000 , 
+    "precio": 8000, 
     "imagen":"/img/libroCN2.png", 
     "stock":13 
 
@@ -107,7 +107,7 @@
         "url":"ciencias-y-naturaleza"
     }, 
     "nombre":"La destrucción de la naturaleza, Vazquez Orozco", 
-    "precio":17000 , 
+    "precio":17000, 
     "imagen":"/img/libroCN3.png", 
     "stock":4 
 
@@ -121,7 +121,7 @@
         "url":"ciencias-y-naturaleza"
     }, 
     "nombre":"Lecciones de física de feynman, Richard Feynman", 
-    "precio":25000 , 
+    "precio":25000, 
     "imagen":"/img/libroCN4.png", 
     "stock":15 
 
@@ -135,7 +135,7 @@
         "url":"ciencias-y-naturaleza"
     }, 
     "nombre":"Qué es metabolismo, Antonio Peña", 
-    "precio":8000 , 
+    "precio":8000, 
     "imagen":"/img/libroCN5.png", 
     "stock":12 
 
@@ -149,7 +149,7 @@
         "url":"ficcion-juvenil"
     }, 
     "nombre":"Una amistad para siempre, Lucy Maud Montgomery", 
-    "precio":17000 , 
+    "precio":17000, 
     "imagen":"/img/libroFJ1.png", 
     "stock":4 
 
@@ -163,7 +163,7 @@
         "url":"ficcion-juvenil"
     }, 
     "nombre":"Ana de las tejas verdes, Lucy Maud Montgomery", 
-    "precio":19000 , 
+    "precio":19000, 
     "imagen":"/img/libroFJ2.png", 
     "stock":3 
 
@@ -177,7 +177,7 @@
         "url":"ficcion-juvenil"
     },  
     "nombre":"Cuatro, Veronica Roth", 
-    "precio":20000 , 
+    "precio":20000, 
     "imagen":"/img/libroFJ3.png", 
     "stock":15 
 
@@ -191,7 +191,7 @@
         "url":"ficcion-juvenil"
     },  
     "nombre":"Divergente, Veronica Roth", 
-    "precio":22000 , 
+    "precio":22000, 
     "imagen":"/img/libroFJ4.png", 
     "stock":8 
 
@@ -205,7 +205,7 @@
         "url":"ficcion-juvenil"
     },  
     "nombre":"Hush hush, Becca Fitzpatrick", 
-    "precio":18000 , 
+    "precio":18000, 
     "imagen":"/img/libroFJ5.png", 
     "stock":5 
 
@@ -219,7 +219,7 @@
         "url":"ficcion-juvenil"
     },  
     "nombre":"Insurgente, Veronica Roth", 
-    "precio":21000 , 
+    "precio":21000, 
     "imagen":"/img/libroFJ6.png",
     "stock":3 
 
@@ -233,7 +233,7 @@
         "url":"ficcion-juvenil"
     },  
     "nombre":"Leal, Veronica Roth", 
-    "precio":24000 ,
+    "precio":24000,
     "imagen":"/img/libroFJ7.png", 
     "stock":12 
 
@@ -247,7 +247,7 @@
         "url":"juegos-de-mesa"
     },  
     "nombre":"Hanabi", 
-    "precio":15000 , 
+    "precio":15000, 
     "imagen":"/img/juego1.png", 
     "stock":4 
 
@@ -261,7 +261,7 @@
         "url":"juegos-de-mesa"
     }, 
     "nombre":"Azul, jardin de la reina", 
-    "precio":28000 , 
+    "precio":28000, 
     "imagen":"/img/juego2.png", 
     "stock":3 
 
@@ -275,7 +275,7 @@
         "url":"juegos-de-mesa"
     }, 
     "nombre":"The red cathedral", 
-    "precio": 25000 , 
+    "precio": 25000, 
     "imagen":"/img/juego3.png", 
     "stock":6 
 
@@ -289,7 +289,7 @@
         "url":"juegos-de-mesa"
     }, 
     "nombre":"Paris", 
-    "precio":27000 , 
+    "precio":27000, 
     "imagen":"/img/juego4.png", 
     "stock":5 
 
@@ -303,7 +303,7 @@
         "url":"juegos-de-mesa"
     }, 
     "nombre":"Bitoku", 
-    "precio":33000 , 
+    "precio":33000, 
     "imagen":"/img/juego5.png", 
     "stock":7 
 
@@ -317,7 +317,7 @@
         "url":"juegos-de-mesa"
     }, 
     "nombre":"Carcassonne, constructores y comerciantes", 
-    "precio":17000 , 
+    "precio":17000, 
     "imagen":"/img/juego6.png", 
     "stock":2 
 
@@ -331,49 +331,49 @@
         "url":"ocio-y-hobbies"
     },
     "nombre":"Bonsai", 
-    "precio":8000 , 
+    "precio":8000, 
     "imagen":"/img/libroOH1.png", 
     "stock":1 
 
     },
     { 
         
-    "id":"25", 
+    "id":25, 
     "categoria":{
         "id": 5,
         "nombre":"Ocio y hobbies",
         "url":"ocio-y-hobbies"
     }, 
     "nombre":"Caligrafía y lettering", 
-    "precio":17000 , 
+    "precio":17000, 
     "imagen":"/img/libroOH2.png",
     "stock":5 
 
     },
     { 
         
-    "id":"26", 
+    "id":26, 
     "categoria":{
         "id": 5,
         "nombre":"Ocio y hobbies",
         "url":"ocio-y-hobbies"
     }, 
     "nombre":"Puzzle, Paul Cezanne", 
-    "precio":20000 , 
+    "precio":20000, 
     "imagen":"/img/puzzle1.png", 
     "stock":3 
 
     },
     { 
         
-    "id":"27", 
+    "id":27, 
     "categoria":{
         "id": 5,
         "nombre":"Ocio y hobbies",
         "url":"ocio-y-hobbies"
     }, 
     "nombre":"Puzzle, Vicent Van Gogh", 
-    "precio":20000 , 
+    "precio":20000, 
     "imagen":"/img/puzzle2.png", 
     "stock":4 
 
