@@ -1,28 +1,40 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext';
-import { CartWidget } from './CartWidget';
 
 export const Cart = () => {
 
-  const { cart, clearCart, totalQuantity, total } = useContext(CartContext);
+  const { cart, total, clear } = useContext(CartContext)
 
-  if (totalQuantity === 0) {
-    return (
-      <div>
-        <h1>Su carrito esta vacío</h1>
-        <Link to='/categorias/:categoria' className='#'>Productos</Link>
-      </div>
-    )
+  const handleClear = () => {
+    clear();
   }
 
   return (
-    <div className="cart">
-      {cart.map(p => <CartWidget key={p.id} {...p} />)}
-      <h3>Total: ${total}</h3>
-      <button onClick={() => clearCart()} className='limpiarCarrito'>Limpiar Carrito</button>
-      <Link to='/checkout' className='checkout'>Checkout</Link>
+    <div className='cart__container'>
+
+      <h1 className='cart__title'>Carrito</h1>
+
+      {
+        cart.map((productos) => (
+          <div className='cart__info' key={productos.id}>
+            <h3>{productos.nombre}</h3>
+            <p>Cantidad: {productos.quantity}</p>
+            <p>Precio producto: ${productos.precio}</p>
+            <p>Precio total: {productos.precio * productos.quantity}</p>
+          </div>
+        ))
+      }
+
+      {cart.length > 0 ?
+        <div>
+          <h2 className='cart__total' >Precio total: ${total()}</h2>
+          <button className='cart__clear' onClick={handleClear} >Vaciar Carrito</button>
+        </div>
+        :
+        <h2>No tiene productos</h2>
+      }
+
     </div>
+
   )
 }
-

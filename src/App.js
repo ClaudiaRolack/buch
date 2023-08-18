@@ -27,7 +27,7 @@ export const App = () => {
             <Route path='/categorias/:categoria' element={<Categoria />} />
             <Route path='/categorias' element={<Categoria />} />
             <Route path='/contacto' element={<p>Contacto</p>} />
-            <Route path="./Cart" element={<Cart />} />
+            <Route path="/Cart" element={<Cart />} />
           </Routes>
 
         </main>

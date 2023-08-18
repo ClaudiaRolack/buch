@@ -3,10 +3,10 @@ import { ItemDetail } from "./ItemDetail"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
-export const ItemDetailContainer = (addItem) => {
+export const ItemDetailContainer = () => {
 
     const [productos, setProductos] = useState([])
-    const [cargar, setCargar] = useState(true)
+    const [cargar, setCargar] = useState(false)
     const { id } = useParams()
 
     useEffect(() => {
@@ -15,9 +15,9 @@ export const ItemDetailContainer = (addItem) => {
                 const response = await fetch('../../productos.json')
                 const jsonData = await response.json()
                 setProductos(jsonData)
-                setTimeout(() => {
-                    setCargar(false)
-                }, 4000)
+                // setTimeout(() => {
+                //     setCargar(false)
+                // }, 4000)
                 return (jsonData)
             }
             fetchProduct()
@@ -34,7 +34,7 @@ export const ItemDetailContainer = (addItem) => {
                 ('Cargando...')
                 :
                 productoEncontrado ?
-                    (<ItemDetail producto={productoEncontrado} handleOnAdd={addItem} />)
+                    (<ItemDetail producto={productoEncontrado} />)
                     :
                     ('Producto no encontrado')}
 

@@ -6,8 +6,7 @@ import logoTrans from "../images/logoTrans.png"
 
 export const NavBar = () => {
 
-    const { cart } = useContext(CartContext);
-    const itemCount = cart.reduce((total, item) => total + item.qty, 0);
+
 
     return (
 
@@ -67,7 +66,7 @@ export const NavBar = () => {
 
                 </div>
                 <div className="contenedor__carrito">
-                    <CartWidget itemCount={itemCount} />
+                    <CartWidget />
                 </div>
 
             </header>

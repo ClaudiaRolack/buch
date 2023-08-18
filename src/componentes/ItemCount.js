@@ -1,14 +1,19 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import signomenos from "../images/signomenos.png"
 import signomas from "../images/signomas.png"
+import { CartContext } from './CartContext'
 
-export const ItemCount = ({ stock, handleOnAdd }) => {
+export const ItemCount = ({ stock, producto }) => {
 
-    let [contador, setContador] = useState(1)
+    const { addCart } = useContext(CartContext);
+   
+    const [quantity, setQuantity] = useState(1);
 
-    function handleSumar() { if (contador < stock) {setContador(contador + 1)} }
-    function handleRestar() { if (contador > 1) { setContador(contador - 1) } }
+    function handleSumar() { if (quantity < stock) {setQuantity(quantity + 1)}}
+    function handleRestar() { if (quantity > 1) {setQuantity(quantity - 1)}}
 
+
+    
     return (
 
         <div className='boton__agregar'>
@@ -19,7 +24,7 @@ export const ItemCount = ({ stock, handleOnAdd }) => {
                     <img src={signomenos} alt="signomenos" />
                 </button>
 
-                <p>{contador}</p>
+                <p>{quantity}</p>
 
                 <button className='boton__imagen' onClick={handleSumar}>
                     <img src={signomas} alt="signomas" />
@@ -29,7 +34,7 @@ export const ItemCount = ({ stock, handleOnAdd }) => {
 
             <div>
 
-                <button className='agregar__carrito' onClick={() => {addItem(contador)}}>
+                <button className='agregar__carrito' onClick={() => {addCart(producto, quantity)}}>
                     Agregar al carrito
                 </button>
 
@@ -40,3 +45,5 @@ export const ItemCount = ({ stock, handleOnAdd }) => {
 
     )
 }
+
+// () => {handleAdd(quantity)

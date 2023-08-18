@@ -1,61 +1,54 @@
 import { createContext, useState, useEffect } from "react";
 
-export const CartContext = createContext({
-    cart: [],
-    totalQuantity: [0]
-})
+export const CartContext = createContext();
 
+const cartLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
 
 export const CartProvider = ({ children }) => {
 
-    const [cart, setCart] = useState([]);
-    const [totalQuantity, setTotalQuantity] = useState ([0])
+const [cart, setCart] = useState(cartLocalStorage);
 
-    const calculateTotalQuantity = (cartItems) => {
-        let total = 0;
-        for (const item of cartItems) {
-            total += item.qty;
-        }
-        return total;
-    };
+function addCart (producto, quantity) {
 
-    const addItem = (item, qty) => {
-
-        if (!isInCart(item.id)) {
-            setCart(prev => [...prev, { ...item, qty }])
-        } else {
-            console.error('El producto ya fue agregado')
-        }
-    };
-
-    const removeItem = (itemId) => {
-        const cartUpdate = cart.filter(producto => producto.id !== itemId)
-        setCart(cartUpdate)
+    const productoAgregado = {...producto, quantity};
+    const newCart = [...cart];
+    const isInCart = newCart.find((producto) => producto.id === productoAgregado.id);
+    
+    if (isInCart) {
+        isInCart.quantity += quantity;
+    } else {
+        newCart.push(productoAgregado);    
     }
+    setCart(newCart);
 
-    const clearCart = () => {
-        setCart([])
-    }
+    console.log(newCart);
+}
 
-    const isInCart = (itemId) => {
-        return cart.some(producto => producto.id === itemId)
-    }
+const cartQuantity = () => {
+    return cart.reduce((acc, prod) => acc + prod.quantity, 0);
+}
 
-    useEffect(() => {
-        const newTotalQuantity = calculateTotalQuantity(cart);
-        setTotalQuantity(newTotalQuantity);
-    }, [cart]);
+const total = () => {
+    return cart.reduce((acc, prod) => acc + prod.precio * prod.quantity, 0);
+}
 
+const clear = () => {
+    setCart([]);
+}
 
+useEffect (() => {
+    localStorage.setItem("cart", JSON.stringify(cart))
+}, [cart])
 
     return (
 
         <CartContext.Provider value={{
-            cart,
-            addItem,
-            removeItem,
-            clearCart,
-            totalQuantity
+
+           addCart,
+           cartQuantity,
+           cart,
+           total,
+           clear
 
         }}>
             {children}

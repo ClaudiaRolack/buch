@@ -1,30 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ItemCount } from './ItemCount'
-import { CartProvider } from './CartContext'
 
 
-export const ItemDetail = ({ producto, addItem }) => {
-
-    const [qty, setQty] = useState(0)
-
-    const handleOnAdd = (cantidad) => {
-        setQty(cantidad)
-
-        const item = {
-            id: producto.id,
-            nombre: producto.nombre,
-            precio: producto.precio
-        }
-
-        addItem(item, cantidad)
-    }
 
 
+export const ItemDetail = ({ producto }) => {
 
     return (
-        <CartProvider>
+
         <article>
+            
             <div className="itemDetail">
 
                 <div className='itemDetail__imagen'>
@@ -48,19 +34,15 @@ export const ItemDetail = ({ producto, addItem }) => {
 
                     <div className='info4'>
 
-                        {qty > 0 ? (
-                            <Link to='./Cart' className="option">Terminar compra</Link>
-                        ) : (
-                            <ItemCount initial={1} stock={producto.stock} handleOnAdd={addItem} />
-                        )
-                        }
+                        <ItemCount producto={producto} stock={producto.stock} />
 
                     </div>
 
                 </div>
 
             </div>
+
         </article>
-        </CartProvider>
+
     )
 }

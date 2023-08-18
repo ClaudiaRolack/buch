@@ -25,35 +25,35 @@ export const ItemListContainer = () => {
 
         setProductos(
           respuesta.docs.map((doc) => {
-            return {...doc.data(), id: doc.id}
+            return { ...doc.data(), id: doc.id }
           })
         )
       })
-})
-      
+  })
 
 
 
 
-// setTimeout(() => {
-//   setCargando(false)
-// }, 4000)
-// return
-//   }, []);
 
-const productosEncontrados = productos.find((producto) => producto.id === parseInt(id));
+  // setTimeout(() => {
+  //   setCargando(false)
+  // }, 4000)
+  // return
+  //   }, []);
 
-return (
+  const productosEncontrados = productos.find((producto) => producto.id === parseInt(id));
 
-  <div className="itemDetailContainer">
-    {cargar ?
-      ('Cargando...')
-      :
-      productosEncontrados ?
-        (<ItemList productos={productosEncontrados} stock={stock} />)
+  return (
+
+    <div className="itemDetailContainer">
+      {cargar ?
+        ('Cargando...')
         :
-        ('Productos no encontrado')}
+        productosEncontrados ?
+          (<ItemList productos={productosEncontrados} stock={stock} />)
+          :
+          ('Productos no encontrado')}
 
-  </div>
-)
+    </div>
+  )
 }
