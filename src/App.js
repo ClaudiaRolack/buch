@@ -7,6 +7,8 @@ import { ItemDetailContainer } from "./componentes/ItemDetailContainer";
 import { Cart } from "./componentes/Cart";
 import { Footer } from "./componentes/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Checkout } from "./componentes/Checkout";
+import { Order } from "./componentes/Order"; 
 import { ToastContainer } from "react-toastify";
 
 
@@ -28,6 +30,8 @@ export const App = () => {
             <Route path='/categorias' element={<Categoria />} />
             <Route path='/contacto' element={<p>Contacto</p>} />
             <Route path="/Cart" element={<Cart />} />
+            <Route path="/Checkout" element={<Checkout />} />
+            <Route path="/Order" element={<Order />} />
           </Routes>
 
         </main>

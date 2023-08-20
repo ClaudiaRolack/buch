@@ -149,13 +149,47 @@ padding-top: 20px;
     padding-bottom: 10px;
 }
 
+.cart__space {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
 .cart__clear{
     background: none;
     background-color: #F1C27B;
     color: white;
     padding: 5px;
     border: none;
+    border-radius: 5px; 
+}
+
+.comprar {
+    text-decoration: none;
+    background-color: #F1C27B;
+    color: white;
+    padding: 5px;
+    border: none;
     border-radius: 5px;
+    font-size: 13px;
+}
+
+/* CHECKOUT */
+
+.checkout__container {
+    display: flex;
+    padding: 25px;
+    gap: 20px;
+}
+
+.checkout__finalizar {
+    text-decoration: none;
+    background-color: #F1C27B;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
 }
 
 /* ITEMCOUNT */

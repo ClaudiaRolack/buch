@@ -9,6 +9,6 @@ Este proyecto nace a raíz del amor por los libros. El sitio web esta enfocado e
 ⋅⋅*firebase
 ⋅⋅*react-toastify
 
-### [GIF]()
+### [GIF](https://imgur.com/a/f5zX5BY)
 
 ### [Demo]()

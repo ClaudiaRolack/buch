@@ -3,10 +3,11 @@ import { ItemDetail } from "./ItemDetail"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
+
 export const ItemDetailContainer = () => {
 
     const [productos, setProductos] = useState([])
-    const [cargar, setCargar] = useState(false)
+    const [cargar, setCargar] = useState(true)
     const { id } = useParams()
 
     useEffect(() => {
@@ -15,9 +16,9 @@ export const ItemDetailContainer = () => {
                 const response = await fetch('../../productos.json')
                 const jsonData = await response.json()
                 setProductos(jsonData)
-                // setTimeout(() => {
-                //     setCargar(false)
-                // }, 4000)
+                setTimeout(() => {
+                    setCargar(false)
+                }, 1000)
                 return (jsonData)
             }
             fetchProduct()
