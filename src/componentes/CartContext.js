@@ -20,8 +20,6 @@ function addCart (producto, quantity) {
         newCart.push(productoAgregado);    
     }
     setCart(newCart);
-
-    console.log(newCart);
 }
 
 const cartQuantity = () => {

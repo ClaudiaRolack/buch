@@ -1,53 +1,49 @@
 import React from "react"
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
 import { ItemList } from "./ItemList"
 import { collection, getDocs } from "firebase/firestore"
 import { db } from "../firebase/config"
+import { allCategories } from "../utils/allCategories"
 
-export const ItemListContainer = () => {
+export const ItemListContainer = ({categoria}) => {
 
   const [productos, setProductos] = useState([])
   const [stock, setStock] = useState(0);
   const [cargar, setCargar] = useState(true)
-  const { id } = useParams()
 
   useEffect(() => {
-
-    const pf1 = collection(db, "productos");
- 
-    getDocs(pf1)
+    
+    if (categoria) {
+      const pf1 = collection(db, categoria);
+      getDocs(pf1)
       .then((resp) => {
-        setTimeout(() => {
-          setCargar(false)
-        }, 4000)
-        return
+        const data = resp.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setCargar(false)
+        setProductos(data)
       })
-
-  })
-
-  const productosEncontrados = productos.find((producto) => producto.id === parseInt(id));
+      .catch(e => console.log(e))
+    } else {
+    allCategories()
+      .then(resp => {
+        setProductos(resp)
+        setCargar(false)
+      })
+      .catch(e => console.log(e));
+    }
+  }, [categoria])
 
   return (
 
     <div className="itemDetailContainer">
       {cargar ?
         ('cargando...')
-        :
-        productosEncontrados ?
-          (<ItemList productos={productosEncontrados} stock={stock} />)
-          :
-          ('Productos no encontrado')}
+        : productos ? 
+        (<ItemList productos={productos} stock={stock} categoria={categoria} />)
+        : 'no encontrados' }
 
     </div>
   )
 }
-
-
-   
-
-
-  // const pf2 = collection(dataBuch, "cienciasYnaturaleza");
-  // const pf3 = collection(dataBuch, "ficcionJuvenil");
-  // const pf4 = collection(dataBuch, "juegosDeMesa");
-  // const pf5 = collection(dataBuch, "ocioYhobbies");

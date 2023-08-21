@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import signomenos from "../images/signomenos.png"
 import signomas from "../images/signomas.png"
 import { CartContext } from './CartContext'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export const ItemCount = ({ stock, producto }) => {
 
@@ -12,8 +14,8 @@ export const ItemCount = ({ stock, producto }) => {
     function handleSumar() { if (quantity < stock) {setQuantity(quantity + 1)}}
     function handleRestar() { if (quantity > 1) {setQuantity(quantity - 1)}}
 
-
-    
+    const notify = () => toast("Producto agregado");
+ 
     return (
 
         <div className='boton__agregar'>
@@ -34,16 +36,14 @@ export const ItemCount = ({ stock, producto }) => {
 
             <div>
 
-                <button className='agregar__carrito' onClick={() => {addCart(producto, quantity)}}>
+                <button className='agregar__carrito' onClick={() => {addCart(producto, quantity); notify();}} >
                     Agregar al carrito
                 </button>
+                <ToastContainer />
 
             </div>
 
         </div>
 
-
     )
 }
-
-// () => {handleAdd(quantity)

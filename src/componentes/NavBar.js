@@ -29,23 +29,23 @@ export const NavBar = () => {
                                 <ul className="list__show">
 
                                     <li className="list__inside">
-                                        <NavLink className="nav__link nav__link--inside" to="/categorias/agendas-y-calendarios">Agendas y Calendarios</NavLink>
+                                        <NavLink className="nav__link nav__link--inside" to="/categorias/AgendasYCalendarios">Agendas y Calendarios</NavLink>
                                     </li>
 
                                     <li className="list__inside">
-                                        <NavLink className="nav__link nav__link--inside" to="/categorias/ciencias-y-naturaleza">Ciencias y Naturaleza</NavLink>
+                                        <NavLink className="nav__link nav__link--inside" to="/categorias/CienciasYNaturaleza">Ciencias y Naturaleza</NavLink>
                                     </li>
 
                                     <li className="list__inside">
-                                        <NavLink className="nav__link nav__link--inside" to="/categorias/ficcion-juvenil">Ficción Juvenil</NavLink>
+                                        <NavLink className="nav__link nav__link--inside" to="/categorias/FiccionJuvenil">Ficción Juvenil</NavLink>
                                     </li>
 
                                     <li className="list__inside">
-                                        <NavLink className="nav__link nav__link--inside" to="/categorias/juegos-de-mesa">Juegos de mesa</NavLink>
+                                        <NavLink className="nav__link nav__link--inside" to="/categorias/JuegosDeMesa">Juegos de mesa</NavLink>
                                     </li>
 
                                     <li className="list__inside">
-                                        <NavLink className="nav__link nav__link--inside" to="/categorias/ocio-y-hobbies">Ocio y Hobbies</NavLink>
+                                        <NavLink className="nav__link nav__link--inside" to="/categorias/OcioYHobbies">Ocio y Hobbies</NavLink>
                                     </li>
 
                                     <li className="list__inside">

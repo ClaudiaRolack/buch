@@ -2,40 +2,40 @@ import React from "react"
 import { ItemDetail } from "./ItemDetail"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../firebase/config"
 
 
 export const ItemDetailContainer = () => {
 
-    const [productos, setProductos] = useState([])
+    const [producto, setProducto] = useState([])
     const [cargar, setCargar] = useState(true)
-    const { id } = useParams()
+    const { id, categoria } = useParams()
 
     useEffect(() => {
-        try {
-            const fetchProduct = async () => {
-                const response = await fetch('../../productos.json')
-                const jsonData = await response.json()
-                setProductos(jsonData)
-                setTimeout(() => {
-                    setCargar(false)
-                }, 1000)
-                return (jsonData)
-            }
-            fetchProduct()
-        } catch (error) {
-            console.log(error)
-        }
-    }, []);
-
-    const productoEncontrado = productos.find((producto) => producto.id === parseInt(id));
+        if (id) {
+            const docRef = doc(db, categoria, id); 
+      
+            getDoc(docRef)
+              .then((documento) => {
+                if (documento.exists()) {
+                  setProducto({ id: documento.id, ...documento.data() });
+                } else {
+                  console.log("Documento no encontrado");
+                }
+                setCargar(false);
+              })
+              .catch(e => console.log(e));
+          }
+    }, [id, categoria]);
 
     return (
         <div className="itemDetailContainer">
             {cargar ?
                 ('Cargando...')
                 :
-                productoEncontrado ?
-                    (<ItemDetail producto={productoEncontrado} />)
+                producto ?
+                    (<ItemDetail producto={producto} />)
                     :
                     ('Producto no encontrado')}
 

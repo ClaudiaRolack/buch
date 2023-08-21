@@ -1,4 +1,3 @@
-
 import { CartProvider } from "./componentes/CartContext";
 import { NavBar } from "./componentes/NavBar";
 import { Categoria } from "./componentes/pages/Categoria";
@@ -25,6 +24,7 @@ export const App = () => {
 
           <Routes>
             <Route path='/' element={<Inicio />} />
+            <Route path='/ver-detalle/:categoria/:id' element={<ItemDetailContainer />} />
             <Route path='/ver-detalle/:id' element={<ItemDetailContainer />} />
             <Route path='/categorias/:categoria' element={<Categoria />} />
             <Route path='/categorias' element={<Categoria />} />
@@ -40,7 +40,7 @@ export const App = () => {
 
       </BrowserRouter>
 
-      {/* <ToastContainer /> */}
+      <ToastContainer />
 
     </CartProvider>
 
